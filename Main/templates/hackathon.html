@@ -1,0 +1,257 @@
+{% extends 'base_for_contact.html'%}
+
+{% block title %}
+Hackathons
+{% endblock %}
+
+{% block content %}
+
+<style>
+    * {
+        /*background: linear-gradient(135deg, #2d0b5e, #3f0055);*/
+        background-color: #2d0b5e;
+
+    }
+
+    .main-container {
+        background-color:#2d0b5e ;
+        display: flex;
+        align-items: center;
+        gap: 15rem;
+    }
+
+    .main-container h1 {
+
+        color: yellow;
+
+        font-family: hikou;
+        font-size: 120px;
+        letter-spacing: 2.6px;
+
+    }
+
+    .first-container h2 {
+        background-color: #2d0b5e;
+        color: yellow;
+        font-family: hikou;
+        font-size: 70px;
+        letter-spacing: 2px;
+    }
+
+    .first-container {
+        background-color: #2d0b5e;
+        margin-top: 20px;
+        margin-left: 190px;
+    }
+
+    .just-below-main {
+        padding-top: 10px;
+        background-color: #220549;
+
+    }
+
+    .hackathons-inserter {
+        background-color: #220549;
+        text-align: left;
+        max-width: 1700px;
+        border: 2px solid;
+        border-radius: 20px;
+        color: antiquewhite;
+
+    }
+
+    .text-background {
+        background-color: #220549;
+        color: yellow;
+        font-size: 35px;
+        margin-top: 30px;
+        height: 50px;
+        width: 1000px;
+        font-family: hikou;
+        font-weight: bold;
+        margin-left: 70px;
+
+    }
+
+    .text-background-upcoming {
+        background-color: #220549;
+        color: yellow;
+        font-size: 35px;
+        margin-top: 30px;
+        text-align: left;
+        font-family: hikou;
+        font-weight: bold;
+        margin-right:70px;
+
+    }
+
+    .upcoming-hackathons {
+        background-color: #220549;
+        background-color: blue;
+        color: yellow;
+        font-size: 35px;
+        margin-top: 30px;
+        height: 100px;
+        font-family: hikou;
+        font-weight: bold;
+        margin-right:70px;
+
+    }
+
+    .hackathons-container {
+        background-color: #220549;
+        text-align: left;
+        margin-top: 50px;
+        margin-left: 70px;
+    }
+
+    .hackathons-containers1 {
+
+        background-color: #220549;
+        text-align: left;
+        margin-top: 50px;
+        margin-right:70px;
+
+
+    }
+
+    .first-hackathon {
+        background-color: #220549;
+        border: 2px solid gold;
+        border-radius: 10px;
+        color: aliceblue;
+        margin-top: 20px;
+        width: 500px;
+        text-align: left;
+    }
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* pushes image to the right */
+    align-items: center;
+    margin-right:50px;
+}
+
+.image-container img {
+    width: 100%; /* adjust width as needed */
+    max-width: 500px;
+    height: auto;
+    object-fit: contain;
+}
+
+    .git-linkkkkkkkk:hover {
+        color: green;
+        transform: scale(1.1);
+
+    }
+</style>
+
+<div class="main-container">
+    <div class="first-container">
+        <h1 style="background-color:#2d0b5e;">SHREE PANCH</h1>
+        <h2>HACKATHON HUSTLE</h2>
+    </div>
+    <div class="image-container">
+        <img src="static/sshot1.png" alt="">
+    </div>
+
+</div>
+<section class="just-below-main" style="display: flex;align-items:center;justify-content:center;">
+    <!-- Participated Hackathons Section 220549--> 
+    <div style="background-color:#220549;width:1000px;align-items:left;justify-content:left;">
+        <div class="text-background text-left container">Participated Hackathon</div>
+
+        <div class="container hackathons-container">
+            <div class="first-hackathon">
+                <h2
+                    style="background-color: #220549; margin-top:18px; margin-left:19px; color:gold; font-family:hikou; display: flex; align-items: center; gap: 20px;">
+                    GIBL Hackathon
+                    <img src="static/calendar.png" alt="calendar icon"
+                        style="height: 30px; width: 30px; object-fit: contain;background-color:#220549;">
+                    <span style="background-color: #220549;font-size:25px;color:antiquewhite;font-weight:bold;">: May
+                        1&2, 2025</span>
+                </h2>
+
+
+                <h4
+                    style="display:flex;background-color: #220549; color:white;font-size:17px;margin-left:19px;margin-top:10px;font-family:Segoe UI">
+                    <a href="https://www.globalimebank.com" target="_blank">
+                        Global IME Bank</a>, Organizer
+                </h4>
+
+                <p
+                    style="background-color: #220549;margin-left:19px;margin-top:19px;font-size:20px;font-family:Segoe UI">
+                    Predictive Analysis for Branch Revenue
+                </p>
+                <h5 style="background-color: #220549;margin-left:19px;margin-top:10px;font-family:Segoe UI">
+                    ML, Python, Jupyter Notebook
+                </h5>
+
+                <br>
+                <br>
+
+                <div style="background-color: #220549;display:flex;gap:0.5rem;margin-bottom:10px;">
+                    <img src="https://img.icons8.com/?size=100&id=12598&format=png&color=FFFFFF" alt=""
+                        style="height:40px; width:40px;margin-left:30px;background-color:#220549;">
+                    <a href="https://www.github.com" target="_blank">
+                        <div class="git-linkkkkkkkk"
+                            style="background-color: #220549;font-weight:bold;color:gold; margin-top:3px;font-size:25px;">
+                            GitHub
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upcoming Hackathons Section -->
+    <div style="background-color: #220549;margin-left:0px;">
+        <div class="text-background-upcoming ">Upcoming Hackathon</div>
+        <div class="container hackathons-containers1">
+            <div class="first-hackathon">
+                <h2
+                    style="background-color: #220549; margin-top:18px; margin-left:19px; color:gold; font-family:hikou; display: flex; align-items: center; gap: 20px;">
+                    Deerhacks
+                    <img src="static/calendar.png" alt="calendar icon"
+                        style="height: 30px; width: 30px; object-fit: contain;background-color:#220549;">
+                    <span style="background-color: #220549;font-size:25px;color:antiquewhite;font-weight:bold;">: July
+                        11,12&13</span>
+                </h2>
+                <h4
+                    style="background-color: #220549; color:white;font-size:17px;margin-left:19px;margin-top:10px;font-family:Segoe UI">
+                    <a href="https://deerwalk.edu.np/DWIT/" target="_blank">
+                        Deerwalk Institute of Technology</a>, Organizer
+                </h4>
+                <p
+                    style="background-color: #220549;margin-left:19px;margin-top:19px;font-size:20px;font-family:Segoe UI">
+                    Coming soon..
+                </p>
+                <h5 style="background-color: #220549;margin-left:19px;margin-top:10px;font-family:Segoe UI">
+                    Coming Soon...
+                </h5>
+
+                <br>
+                <br>
+
+                <div style="background-color: #220549;display:flex;gap:0.5rem;margin-bottom:10px;">
+                    <img src="https://img.icons8.com/?size=100&id=12598&format=png&color=FFFFFF" alt=""
+                        style="height:40px; width:40px;margin-left:30px;background-color:#220549;">
+                    <a href="https://www.github.com" target="_blank">
+                        <div class="git-linkkkkkkkk"
+                            style="background-color: #220549;font-weight:bold;color:gold; margin-top:3px;font-size:25px;">
+                            GitHub
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+<footer style="background-color:#220549; color: gray; text-align: center; padding: 20px; font-size: 0.9rem;">
+  <p style="background-color: #220549;">© 2025 Shree Panch. All Rights Reserved.</p>
+  <p style="background-color: #220549;">Crafted with legacy by Team Royalty.</p>
+</footer>
+
+{% endblock %}

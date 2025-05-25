@@ -1,0 +1,112 @@
+{% extends "base_for_contact.html" %}
+{% block title%}
+Gallery
+{% endblock title %}
+
+{% block content %}
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #14062e;
+        
+
+
+    }
+    nav {
+        background-color: #2d0b5e;
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        padding: 2rem;
+        background-color: #14062e;
+    }
+
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .gallery-item:hover {
+        transform: translateY(-20px) scale(1.05);
+        box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    .caption {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        color: gold;
+        padding: 0.8rem;
+        font-size: 1rem;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover .caption {
+        opacity: 1;
+    }
+</style>
+
+<header class="gallery-header" style="color:gold;margin-top:0px;text-align: center;
+        background-color: #2d0b5e;
+        padding-top: 2rem;
+        padding-bottom: 2rem;">
+    <h1 style="font-size: 50px;">Gallery of Team Shree Panch</h1>
+    <p style="font-size: 20px;">Moments of hustle, passion & teamwork</p>
+</header>
+
+
+<section class="gallery-grid" style="background-color: #14062e;">
+    <div class="gallery-item">
+        <img src="static/hack1.jpg" alt="Team at Hackathon">
+        <div class="caption">Chilling-Chilling</div>
+    </div>
+    <div class="gallery-item">
+        <img src="static/hack6.jpg" alt="Break Time">
+        <div class="caption">The BodyGuard</div>
+    </div>
+    <div class="gallery-item">
+        <img src="static/utsab.jpg" alt="Utsu">
+        <div class="caption">The Sexy</div>
+    </div>
+    <div class="gallery-item large">
+        <img src="static/hack2.jpg" alt="Presentation">
+        <div class="caption">A Group - Team 5AM</div>
+    </div>
+    <div class="gallery-item">
+        <img src="static/hack5.jpg" alt="Winning Moment">
+        <div class="caption">Market Khanxa</div>
+    </div>
+    <div class="gallery-item">
+        <img src="static/hack7.jpg" alt="Worship">
+        <div class="caption">WORSHIPPING LEADER</div>
+    </div>
+    <div class="gallery-item">
+        <img src="static/hack3.jpg" alt="Lunch Time">
+        <div class="caption">Lunch Time</div>
+    </div>
+    <div class="gallery-item">
+        <img src="static/award1.jpg" alt="Lunch Time">
+        <div class="caption">Only award that we deserve</div>
+    </div>
+</section>
+
+{% endblock content %}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="icon" href="{{ url_for('static', filename='logo.jpg') }}" type="image/png" />
+    <link rel="stylesheet" href="static/contact.css">
+    <style>
+        body {
+            text-align: center;
+            font-family: sans-serif;
+            background-color:#2d0b5e;
+            padding: 0px;
+        }
+
+        h1 {
+            margin-top: 20px;
+        }
+    </style>
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+    <nav class="navbar navbar-expand-lg">
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" style="font-weight:bold;font-size: 22px;margin-left:200px;gap:2rem;">
+                <li class="nav-item active">
+                    <a class="nav-link text-light" href="{{ url_for('home_page')}}">HOME<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-light" href="{{url_for('aboutus_page')}}">ABOUT US</a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link text-light" href="{{url_for('hackathon_page')}}">HACKATHONS</a>
+                </li>
+
+            </ul>
+            <img class="text-center" src="static/logo1.png" alt=""
+                style="height:210px;width:210;border:2px solid grey; border-radius:50%;">
+
+            <ul class="navbar-nav ml-auto" style="font-weight:bold;font-size: 22px;margin-right:200px;gap:2rem;">
+                <li class="nav-item active">
+                    <a class="nav-link text-light" href="{{url_for('teams_page')}}">TEAM</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-light" href="{{url_for('contact_page')}}">CONTACT US</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-light" href="{{url_for('gallery_page')}}">GALLERY</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+  {% for category,message in messages%}
+  <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+    {{ message}}
+
+    <button type="button" class="close m1-2 mb-1" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  {% endfor%}
+  {% endif %}
+  {% endwith %}
+
+    {% block content %}
+
+    {% endblock content%}
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <!-- Some javascripts  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS (v4.5.2 to match your CSS) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

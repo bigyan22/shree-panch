@@ -1,0 +1,188 @@
+{% extends "base_for_contact.html" %}
+
+{% block title %}
+HomePage
+{% endblock title %}
+
+{% block content %}
+
+<body>
+    <style>
+        nav {
+            background:linear-gradient(135deg, #2e1058, #3f0055);
+            
+        }
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        @media (min-width: 768px) {
+            .card-container {
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 3.5rem;
+            }
+        }
+
+        .card {
+            border: 1px solid gold;
+            padding: 2rem;
+            text-align: center;
+            background-color:#2e1058;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: gold;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-weight: bold;
+            font-size: 1.4rem;
+            color: gold;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        .card-desc {
+            font-size: 1.24rem;
+            font-family: hikou;
+            font-weight: large;
+            color: yellowgreen;
+        }
+    </style>
+    <div>
+
+        <!-- Slide 1 -->
+        <section class="h-screen snap-start bg-[#e4deca] flex flex-col items-center justify-center"
+            style="background:linear-gradient(135deg, #2e1058, #3f0055);">
+            <
+            <div class="container" style="color: antiquewhite;margin-top:0px;">
+                <h1 style="font-size:150px;font-family:flix;color:gold;">CODE LIKE
+                    <br>
+                    ROYALTY!
+                </h1>
+                <br>
+                <h4 style="font-size:50px; font-family:hikou;font-weight:bold;color:greenyellow;"> - Where logic meets legacy.</h4>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+            </div>
+        </section>
+        <!-- Slide 2 -->
+        <section class="h-screen snap-start bg-[#e4deca] text-black flex flex-col justify-center items-center px-4"
+            style="background-color:#220549;">
+            <div class="container">
+                <div class="container">
+                    <br>
+                    <br>
+                    <h1 style="font-size:60px;font-family:flix;font-weight:bold;color:gold;">MISSION STATEMENT
+                    </h1>
+                    <br>
+                    <br>
+                    <div class="container" style="max-width:690px;">
+                        <h3
+                            style="font-size:30px; font-family:san-serif;font-weight:bold;color:yellow;text-align:center;">
+                            At Shree Panch, We merge tradition with inovation
+                            <br> to create solutions that rule-
+                            <br>not just
+                            compete.
+
+                        </h3>
+                    </div>
+                    <br>
+                    <br><br>
+                    <div class="card-container">
+                        <div class="card">
+                            <div class="card-icon"><img src="static/strategic1.png" alt=""
+                                    style="height:230px;width:230px;"></div>
+                            <div class="card-title">STRATEGIC VISIONARIES</div>
+                            <div style="
+                                        height: 2px;
+                                        width: 60%;
+                                        margin: 10px auto;
+                                        background: linear-gradient(to right, transparent, yellow, transparent);
+                                        ">
+                            </div>
+                            <div class="card-desc">Pioneering forward-thinking solutions.</div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-icon"><img src="static/elitee.png" alt=""
+                                    style="height:230px;width:230px;"></div>
+                            <div class="card-title">ELITE
+                                <br> INNOVATORS
+                            </div>
+                            <div style="
+                                        height: 2px;
+                                        width: 60%;
+                                        margin: 10px auto;
+                                        background: linear-gradient(to right, transparent, yellow, transparent);
+                                        ">
+                            </div>
+
+                            <div class="card-desc">Leading with creativity and excellence.</div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-icon"><img src="static/grand.png" alt="" style="height:230px;width:230px;">
+                            </div>
+                            <div class="card-title">GRAND
+                                <br>
+                                LEGACY
+                            </div>
+                            <div style="
+                                        height: 2px;
+                                        width: 60%;
+                                        margin: 10px auto;
+                                        background: linear-gradient(to right, transparent, yellow, transparent);
+                                        ">
+                            </div>
+                            <div class="card-desc">Building enduring impact and tradition.</div>
+                        </div>
+
+                    </div>
+                    <br>
+
+        </section>
+
+
+    </div>
+    <section class="home-end" style="background-color:#3f0055; color: gold; padding: 46px 10px; text-align: center;">
+        <h2 style="font-size: 2rem; font-family: 'Cinzel', serif; letter-spacing: 2px;">“Where legacy meets innovation.”
+        </h2>
+        <p style="margin-top: 20px; font-size: 1.2rem;">Join Shree Panch and be part of a revolution driven by pride,
+            purpose, and powerful ideas.</p>
+
+        <img src="static/shree_panch.png" alt="" style="height:480px; width:480px;">
+        <br>
+        <a href="{{url_for('contact_page')}}"
+            style="display: inline-block; margin-top: 30px; padding: 12px 30px; background: gold; color: black; text-decoration: none; border-radius: 8px; font-weight: bold; transition: 0.3s;">
+            Connect With Us
+        </a>
+        <br>
+        <footer style=" text-align: center; padding: 0px; font-size: 0.9rem;">
+            <p>© 2025 Shree Panch. All Rights Reserved.</p>
+            <p>Crafted with legacy by Shree Panch.</p>
+        </footer>
+    </section>
+</body>
+
+
+{% endblock content %}
