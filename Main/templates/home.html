@@ -9,9 +9,10 @@ HomePage
 <body>
     <style>
         nav {
-            background:linear-gradient(135deg, #2e1058, #3f0055);
-            
+            background: linear-gradient(135deg, #2e1058, #3f0055);
+
         }
+
         .card-container {
             display: flex;
             flex-direction: column;
@@ -32,7 +33,7 @@ HomePage
             border: 1px solid gold;
             padding: 2rem;
             text-align: center;
-            background-color:#2e1058;
+            background-color: #2e1058;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
             transition: transform 0.3s ease;
@@ -62,20 +63,24 @@ HomePage
             font-weight: large;
             color: yellowgreen;
         }
+
+        .imageee:hover {
+            transform: scale(1.01);
+        }
     </style>
     <div>
 
         <!-- Slide 1 -->
         <section class="h-screen snap-start bg-[#e4deca] flex flex-col items-center justify-center"
             style="background:linear-gradient(135deg, #2e1058, #3f0055);">
-            <
             <div class="container" style="color: antiquewhite;margin-top:0px;">
                 <h1 style="font-size:150px;font-family:flix;color:gold;">CODE LIKE
                     <br>
                     ROYALTY!
                 </h1>
                 <br>
-                <h4 style="font-size:50px; font-family:hikou;font-weight:bold;color:greenyellow;"> - Where logic meets legacy.</h4>
+                <h4 style="font-size:50px; font-family:hikou;font-weight:bold;color:greenyellow;"> - Where logic meets
+                    legacy.</h4>
                 <br>
                 <br>
                 <br>
@@ -170,14 +175,15 @@ HomePage
         <p style="margin-top: 20px; font-size: 1.2rem;">Join Shree Panch and be part of a revolution driven by pride,
             purpose, and powerful ideas.</p>
 
-        <img src="static/shree_panch.png" alt="" style="height:480px; width:480px;">
+        <img src="static/hack2.jpg" class="imageee" alt="Group"
+            style="height:500px; width:480px;border:2px solid grey;border-radius:20px;">
         <br>
         <a href="{{url_for('contact_page')}}"
             style="display: inline-block; margin-top: 30px; padding: 12px 30px; background: gold; color: black; text-decoration: none; border-radius: 8px; font-weight: bold; transition: 0.3s;">
             Connect With Us
         </a>
         <br>
-        <footer style=" text-align: center; padding: 0px; font-size: 0.9rem;">
+        <footer style=" text-align: center; padding: 0px; font-size: 0.9rem; margin-top:20px;">
             <p>© 2025 Shree Panch. All Rights Reserved.</p>
             <p>Crafted with legacy by Shree Panch.</p>
         </footer>

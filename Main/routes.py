@@ -52,11 +52,11 @@ def contact_page():
         subject = f"Hello {contact_to_submit.name}, Thanks for Contacting Us!"
         body = (
             f"Dear {contact_to_submit.name},\n\n"
-            "Thank you for reaching out. We have received your message with the following details:\n\n"
+            "Thank you for reaching out and feedback. We have received your message with the following details:\n\n"
             f"📧 Email: {contact_to_submit.email}\n"
             f"📞 Phone: {contact_to_submit.phone}\n"
             "We will get back to you as soon as possible.\n\n"
-            "Best regards,\nTeam 5AM"
+            "Best regards,\nShree Panch"
         )
         subject_admin = "New Contact Submission on Shree Panch Website"
         body_admin = (
@@ -72,7 +72,7 @@ def contact_page():
 
         email_alerts(subject, body, contact_to_submit.email)
         email_alerts(subject_admin, body_admin, 'bigyanmishra022@gmail.com')
-        flash(f"Thanks for contacting!{contact_to_submit.name}", category='success')
+        flash(f"Thanks for contacting! {contact_to_submit.name}", category='success')
         return redirect(url_for('home_page'))
     
     return render_template('contact.html')
